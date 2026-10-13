@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fujixcam-mcp"
+version = "0.2.1"
+description = "MCP server for FUJIFILM digital camera control"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [
+	{ name = "Masahiro Terada" }
+]
+keywords = ["MCP", "fujifilm", "camera", "tether", "photo", "imaging" ]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Multimedia :: Graphics :: Capture :: Digital Camera",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "mcp[cli]>=2,<3",
+    "pillow>=10.0.0",
+    "fujixcam>=0.2.1",
+]
+
+[project.optional-dependencies]
+dev = []
+
+[project.urls]
+Documentation = "https://github.com/mterada/fujixcam-mcp#readme"
+Repository = "https://github.com/mterada/fujixcam-mcp"
+Discussions = "https://github.com/mterada/fujixcam-mcp/discussions"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["fujixcam*"]
+
+[tool.setuptools.package-data]

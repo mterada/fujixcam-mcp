@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "fujixcam-mcp": {
+      "command": "python",
+      "args": [
+        "-m",
+        "fujixcam_mcp.server"
+      ],
+      "env":{
+      }
+    }
+  }
+}

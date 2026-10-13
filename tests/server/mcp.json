@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "filesystem-server-default": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/tmp"
+      ]
+    },
+    "fujixcam-mcp": {
+      "type": "stdio",
+      "command": "python",
+      "args": [
+        "-m",
+        "fujixcam_mcp.server"
+      ]
+    }
+  }
+}
